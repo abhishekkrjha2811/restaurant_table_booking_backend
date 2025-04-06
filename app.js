@@ -7,7 +7,7 @@ import cookieParser from "cookie-parser";
 
 //importing routes
 import userRoutes from './routes/userRoutes.js'
-// import restaurantRoutes from './routes/restaurantRoutes.js';
+import restaurantRoutes from './routes/restaurantRoutes.js';
 // import bookingRoutes from './routes/bookingRoutes.js';
 
 //importing dbConnection
@@ -37,7 +37,7 @@ app.use(express.urlencoded({ extended : true}));
 
 //using routes
 app.use('/api/v1/user',userRoutes);
-// app.use('/api/v1/restaurant', restaurantRoutes);
+app.use('/api/v1/restaurant', restaurantRoutes);
 // app.use('/api/v1/booking', bookingRoutes);
 
 //dbconnection
