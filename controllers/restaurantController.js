@@ -122,3 +122,19 @@ export const deleteRestaurant = async (req, res) => {
         });
     }
 };
+
+
+export const getAllRestaurants = async (req, res) => {
+    try {
+        const restaurants = await Restaurant.find(); // Fetch all restaurants
+        res.status(200).json({
+            success: true,
+            data: restaurants,
+        });
+    } catch (error) {
+        res.status(500).json({
+            success: false,
+            message: error.message,
+        });
+    }
+};
