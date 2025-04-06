@@ -1,6 +1,11 @@
 import express from "express";
-import { addRestaurant,deleteRestaurant,updateRestaurant,getAllRestaurants } from "../controllers/restaurantController.js";
-import { isAuthorized} from "../middleware/auth.js";
+import {
+  addRestaurant,
+  deleteRestaurant,
+  updateRestaurant,
+  getAllRestaurants,
+} from "../controllers/restaurantController.js";
+import { isAuthorized } from "../middleware/auth.js";
 
 const router = express.Router();
 
@@ -12,7 +17,5 @@ router.delete("/delete/:id", isAuthorized, deleteRestaurant);
 router.put("/update/:id", isAuthorized, updateRestaurant);
 //any one can fetch
 router.get("/", getAllRestaurants);
-
-
 
 export default router;
