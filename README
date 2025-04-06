@@ -1,0 +1,47 @@
+# Restaurant Table Booking Backend
+
+This is the backend for a restaurant table booking system. It provides APIs for managing restaurants, reservations, and user authentication.
+
+---
+
+## **Features**
+- User authentication and authorization (JWT-based).
+- Search for restaurants and view details.
+- Book reservations for restaurants.
+- Cancel reservations.
+- Admin functionality to view all reservations.
+- Email notifications for reservation confirmation and cancellation.
+
+## **Sample .env File**
+
+Create a `.env` file in the root directory of the project and add the following environment variables:
+
+```
+PORT = 5000
+# MONGO_URL=mongodb://127.0.0.1:27017
+MONGO_URL=mongodb+srv://email4:password@cluster0.rqyepfs.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0w32
+JWT_SECRET_KEY =
+JWT_EXPIRE=7d
+COOKIE_EXPIRE=5
+EMAIL_USER= dsfasdf@gmail.com
+EMAIL_PASS=generate it  
+```
+
+Replace the placeholder values with your actual configuration details.
+
+## **Technologies Used**
+- **Node.js**: Backend runtime.
+- **Express.js**: Web framework.
+- **MongoDB**: Database for storing data.
+- **Mongoose**: ODM for MongoDB.
+- **Nodemailer**: For sending email notifications.
+- **JWT**: For user authentication.
+
+---
+
+## **Setup Instructions**
+
+### **1. Clone the Repository**
+```bash
+git clone https://github.com/your-username/Restaurant_Table_Booking_Backend.git
+cd Restaurant_Table_Booking_Backend
